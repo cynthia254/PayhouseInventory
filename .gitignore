@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+
+# .NET build
+bin/
+obj/
+
+# Node / Vue
+node_modules/
+dist/
+.env

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Account Activated</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            color: #333;
+        }
+
+        .email-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+        }
+
+        .credentials {
+            background: #f9f9f9;
+            padding: 12px;
+            border-left: 4px solid #007bff;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h2>Hello {{userName}},</h2>
+
+        <p>{{payload}}</p>
+
+        <div class="credentials">
+            <p><strong>Email:</strong> {{userEmail}}</p>
+            <p><strong>Password:</strong> {{password}}</p>
+        </div>
+
+        <p><strong>Activation Date:</strong> {{activationDate}}</p>
+
+        <p>We’re excited to have you onboard. Please keep your credentials safe.</p>
+
+        <br />
+
+        <p>Best regards,<br />The Payhouse Team</p>
+
+        <div class="footer">
+            &copy; {{activationDate}} Payhouse Ltd. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
