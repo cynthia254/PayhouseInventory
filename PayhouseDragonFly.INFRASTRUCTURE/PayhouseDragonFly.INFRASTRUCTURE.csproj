@@ -1,57 +1,51 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
 
-  <ItemGroup>
-    <None Remove="appsettings.Development.json" />
-  </ItemGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="appsettings.Development.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
+	<!-- 👇 Prevent appsettings.Development.json from being copied -->
+	<ItemGroup>
+		<None Update="appsettings.Development.json" CopyToOutputDirectory="Never" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="ClosedXML" Version="0.101.0" />
-    <PackageReference Include="EPPlus" Version="6.2.6" />
-    <PackageReference Include="Hosting.Extensions.Quartz" Version="1.1.1" />
-    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
-    <PackageReference Include="MailKit" Version="4.0.0" />
-    <PackageReference Include="MailKit.NET" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
-    <PackageReference Include="MimeKit" Version="4.0.0" />
-    <PackageReference Include="NPOI" Version="2.6.0" />
-    <PackageReference Include="PDFsharp" Version="1.50.5147" />
-    <PackageReference Include="Quartz" Version="3.6.2" />
-    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.6.2" />
-    <PackageReference Include="SendGrid.SmtpApi" Version="1.4.6" />
-    <PackageReference Include="SmtpServer" Version="9.0.2" />
-    <PackageReference Include="ZXing.Net" Version="0.16.9" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="ClosedXML" Version="0.101.0" />
+		<PackageReference Include="EPPlus" Version="6.2.6" />
+		<PackageReference Include="Hosting.Extensions.Quartz" Version="1.1.1" />
+		<PackageReference Include="iTextSharp" Version="5.5.13.3" />
+		<PackageReference Include="MailKit" Version="4.0.0" />
+		<PackageReference Include="MailKit.NET" Version="2.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+		<PackageReference Include="MimeKit" Version="4.0.0" />
+		<PackageReference Include="NPOI" Version="2.6.0" />
+		<PackageReference Include="PDFsharp" Version="1.50.5147" />
+		<PackageReference Include="Quartz" Version="3.6.2" />
+		<PackageReference Include="Quartz.Extensions.Hosting" Version="3.6.2" />
+		<PackageReference Include="SendGrid.SmtpApi" Version="1.4.6" />
+		<PackageReference Include="SmtpServer" Version="9.0.2" />
+		<PackageReference Include="ZXing.Net" Version="0.16.9" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PayhouseDragonFly.CORE\PayhouseDragonFly.CORE.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\PayhouseDragonFly.CORE\PayhouseDragonFly.CORE.csproj" />
+	</ItemGroup>
 
 </Project>

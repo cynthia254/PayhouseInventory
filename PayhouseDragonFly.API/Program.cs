@@ -122,19 +122,17 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 app.UseCors(devCorsPolicy);
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "PayhouseDragonFly.API V1");
-        c.RoutePrefix = string.Empty; // Serve Swagger at root '/'
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PayhouseDragonFly.API V1");
+    c.RoutePrefix = "swagger"; // Swagger will be at /swagger
+});
 
 
-app.UseAuthentication();
-app.UseAuthorization();
+
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 
 app.MapControllers();
